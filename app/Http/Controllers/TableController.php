@@ -46,7 +46,7 @@ class TableController extends Controller
         }
 
         Table::create($validatedData);
-        return redirect(route('tables.index'))->with('Success', 'Table created successfully');
+        return redirect(route('admins.index'))->with('Success', 'Table created successfully');
     }
 
     /**
@@ -88,7 +88,7 @@ class TableController extends Controller
             $validatedData['image_path'] = str_replace('public/', '', $imagePath);
         }
         $table->update($validatedData);
-        return redirect(route('tables.index'))->with('Success', 'Table updated successfully');
+        return redirect(route('admins.index'))->with('Success', 'Table updated successfully');
     }
 
     /**

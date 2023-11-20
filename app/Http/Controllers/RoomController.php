@@ -45,7 +45,7 @@ class RoomController extends Controller
         }
 
         Room::create($validatedData);
-        return redirect(route('rooms.index'))->with('Success', 'Room created successfully');
+        return redirect(route('admins.index'))->with('Success', 'Room created successfully');
     }
 
     /**
@@ -87,7 +87,7 @@ class RoomController extends Controller
             $validatedData['image_path'] = str_replace('public/', '', $imagePath);
         }
         $room->update($validatedData);
-        return redirect(route('rooms.index'))->with('Success', 'Rooms updated successfully');
+        return redirect(route('admins.index'))->with('Success', 'Rooms updated successfully');
     }
 
     /**
