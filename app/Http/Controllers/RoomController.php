@@ -79,7 +79,7 @@ class RoomController extends Controller
             'room_name' => 'required|string|max:255',
             'room_price' => 'required|numeric|min:0',
             'room_description' => 'required|string',
-            'image_path' => 'required|image',
+            'image_path' => 'image',
         ]);
 
         if ($request->hasFile('image_path')) {
@@ -87,7 +87,7 @@ class RoomController extends Controller
             $validatedData['image_path'] = str_replace('public/', '', $imagePath);
         }
         $room->update($validatedData);
-        return redirect(route('admins.index'))->with('Success', 'Rooms updated successfully');
+        return redirect(route('admins.admin_room'))->with('Success', 'Rooms updated successfully');
     }
 
     /**
@@ -97,6 +97,7 @@ class RoomController extends Controller
     {
         //
         $room = Room::findOrFail($id);
-        return redirect(route('rooms.index'))->with('Success', 'Room deleted successfully');
+        $room->delete();
+        return redirect(route('admins.admin_room'))->with('Success', 'Room deleted successfully');
     }
 }
