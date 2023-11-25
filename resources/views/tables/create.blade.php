@@ -39,7 +39,7 @@
              </div>
 
             <div class="mb-4">
-                <button type="submit" class="w-full px-4 py-2 bg-gray-800 text-white rounded">Create Table</button>
+                <button type="submit" class="w-full px-4 py-2 bg-blue-500 text-white rounded">Create Table</button>
             </div>
         </form>
     </div>

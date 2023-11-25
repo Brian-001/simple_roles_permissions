@@ -29,7 +29,7 @@
                 @forelse ($adminTable as $table )
                     <tr>
                         <td class="px-6 py-4 whitespace-no-wrap border-b border-gray-200">
-                            {{ $table->table_id }}
+                            {{ $table->id }}
                         </td>
                         <td class="px-6 py-4 whitespace-no-wrap border-b border-gray-200">
                             {{ $table->table_name }}

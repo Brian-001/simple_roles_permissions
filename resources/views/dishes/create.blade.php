@@ -24,7 +24,7 @@
 
             <div class="mb-4">
                 <label for="price" class="block text-gray-700">Price</label>
-                <input type="number" name="dish_price" id="dish_price" class="w-full px-2 py-1 border rounded">
+                <input type="number" name="dish_price" id="dish_price" min="0.00" class="w-full px-2 py-1 border rounded">
                 @error('name')
                     <p class="text-red-500 text-xs mt-1">{{ $message }}</p>
                 @enderror
@@ -39,7 +39,7 @@
              </div>
 
             <div class="mb-4">
-                <button type="submit" class="w-full px-4 py-2 bg-gray-800 text-white rounded">Create Dish</button>
+                <button type="submit" class="w-full px-4 py-2 bg-blue-500 text-white rounded">Create Dish</button>
             </div>
         </form>
     </div>

@@ -9,6 +9,10 @@ class Dish extends Model
 {
     use HasFactory;
 
+    public function getFormattedDishPriceAttribute($value)
+    {
+        return number_format($value, 2, '.', ',');
+    }
     protected $fillable = [
         'dish_name',
         'dish_description',

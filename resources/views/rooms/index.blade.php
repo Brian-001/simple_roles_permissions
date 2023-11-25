@@ -34,7 +34,7 @@
             <div class="p-4">
               <h2 class="text-xl font-semibold">{{ $room->room_name }}</h2>
               <p class="text-gray-600">{{ $room->room_description }}</p>
-              <p class="mt-2 text-lg font-semibold text-green-600">{{ $room->room_price }}</p>
+              <p class="mt-2 text-lg font-semibold text-green-600">Ksh {{ $room->room_price }}</p>
               <a href="#" class="block mt-4 px-4 py-2 bg-green-600 text-white text-center rounded-md hover:bg-green-700">Book</a>
             </div>
         </div>

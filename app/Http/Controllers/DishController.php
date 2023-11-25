@@ -82,7 +82,7 @@ class DishController extends Controller
             'dish_name' => 'required|string|max:255',
             'dish_price' => 'required|numeric|min:0',
             'dish_description' => 'required|string',
-            'image_path' => 'required|image',
+            'image_path' => 'image',
         ]);
 
         if ($request->hasFile('image_path')) {
@@ -90,7 +90,7 @@ class DishController extends Controller
             $validatedData['image_path'] = str_replace('public/', '', $imagePath);
         }
         $dish->update($validatedData);
-        return redirect(route('admins.index'))->with('Success', 'Dishes updated successfully');
+        return redirect(route('admins.admin_dish'))->with('Success', 'Dishes updated successfully');
     }
 
     /**
@@ -100,7 +100,9 @@ class DishController extends Controller
     {
         //
         $dish = Dish::findOrFail($id);
-        return redirect(route('dishes.index'))->with('Success', 'Dish deleted successfully');
+        $dish->delete();
+        
+        return redirect(route('admins.admin_dish'))->with('Success', 'Dish deleted successfully');
 
     }
 }
