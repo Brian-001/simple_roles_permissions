@@ -9,7 +9,7 @@
 
             <div class="mb-3">
                 <label for="name" class="block text-gray-700">Table Name</label>
-                <input type="text" name="table_name" id="table_name" value="{{ $table->table->name }}" class="w-full px-2 py-1 border rounded">
+                <input type="text" name="table_name" id="table_name" value="{{ $table->table_name }}" class="w-full px-2 py-1 border rounded">
                 @error('name')
                     <p class="text-red-500 text-xs mt-1">{{ $message }}</p>
                 @enderror
@@ -31,9 +31,9 @@
                 @enderror
             </div>
             <div class="flex space-x-2">
-                
+
                 <div class="mb-2 h-16 w-16">
-                    <img src="{{route('storage', . $room->image_path) }}" alt="">
+                    <img src="{{ asset('storage/' . $table->image_path) }}" alt="">
                 </div>
 
                 <div class="mb-4">

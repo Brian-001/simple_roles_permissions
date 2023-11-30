@@ -77,10 +77,10 @@ class TableController extends Controller
         //
         $table = Table::findOrFail($id);
         $validatedData = $request->validate([
-            'room_name' => 'required|string|max:255',
-            'room_price' => 'required|numeric|min:0',
-            'room_description' => 'required|string',
-            'image_path' => 'required|image',
+            'table_name' => 'required|string|max:255',
+            'table_price' => 'required|numeric|min:0',
+            'table_description' => 'required|string',
+            'image_path' => 'image',
         ]);
 
         if ($request->hasFile('image_path')) {
@@ -88,7 +88,7 @@ class TableController extends Controller
             $validatedData['image_path'] = str_replace('public/', '', $imagePath);
         }
         $table->update($validatedData);
-        return redirect(route('admins.index'))->with('Success', 'Table updated successfully');
+        return redirect(route('admins.admin_table'))->with('Success', 'Table updated successfully');
     }
 
     /**
@@ -98,6 +98,7 @@ class TableController extends Controller
     {
         //
         $table = Table::findOrFail($id);
-        return redirect(route('tables.index'))->with('Success', 'Table deleted successfully');
+        $table->delete();
+        return redirect(route('admins..admin_table'))->with('Success', 'Table deleted successfully');
     }
 }

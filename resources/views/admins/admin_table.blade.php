@@ -23,6 +23,9 @@
                     <th class="px-6 py-3 border-b border-gray-200 bg-gray-100 text-left text-xs leading-4 font-medium text-gray-500 uppercase tracking-wider">
                         Price
                     </th>
+                    <th class="px-6 py-3 border-b border-gray-200 bg-gray-100 text-left text-xs leading-4 font-medium text-gray-500 uppercase tracking-wider">
+                        Action
+                    </th>
                 </tr>
             </thead>
             <tbody>
@@ -39,6 +42,16 @@
                         </td>
                         <td class="px-6 py-4 whitespace-no-wrap border-b border-gray-200">
                             {{ $table->table_price }}
+                        </td>
+                        <td class="px-6 py-4 whitespace-no-wrap border-b border-gray-200">
+                            <div class="flex space-x-2">
+                                <a href="{{route('tables.edit', ['table'=>$table->id])}}" class="py-2 px-1 bg-green-500 hover:bg-green-700 rounded text-white">Edit</a>
+                                <form action="{{route('tables.destroy', ['table'=>$table->id])}}" method="post">
+                                    @csrf
+                                    @method('DELETE')
+                                    <button type="submit" class="py-2 px-1 bg-red-500 hover:bg-red-700 rounded text-white">Delete</button>
+                                </form>
+                            </div>
                         </td>
                     </tr>
                 @empty
