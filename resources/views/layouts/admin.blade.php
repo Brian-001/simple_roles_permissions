@@ -45,7 +45,7 @@
                     <a href="{{ route('admins.admin_room') }}" class="text-white hover:text-black duration-300">Rooms</a>
                 </li>
                 <li>
-                    <a href="#" class="text-white hover:text-black duration-300">Orders</a>
+                    <a href="{{ route('admins.admin_order') }}" class="text-white hover:text-black duration-300">Orders</a>
                 </li>
 
             </ul>

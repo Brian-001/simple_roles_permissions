@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Dish;
+use App\Models\Order;
 use App\Models\Room;
 use App\Models\Table;
 use Illuminate\Http\Request;
@@ -37,6 +38,16 @@ class AdminController extends Controller
     {
         $tables = Table::all();
         return view('admins.admin_table', ['adminTable' => $tables]);
+    }
+
+    //Display Orders created in admin_orders.blade.php
+
+    public function adminOrder()
+    {
+        $orders = Order::with(['dish', 'room', 'table'])->get();
+
+        return view('admins.admin_order', ['adminOrder' => $orders]);
+
     }
     /**
      * Show the form for creating a new resource.

@@ -44,3 +44,4 @@ Route::get('admins/admin_dish', [AdminController::class, 'adminDish'])->name('ad
 Route::get('admins/admin_room', [AdminController::class, 'adminRoom'])->name('admins.admin_room');
 Route::get('admins/admin_table', [AdminController::class, 'adminTable'])->name('admins.admin_table');
 
+Route::get('admins/admin_order', [AdminController::class, 'adminOrder'])->name('admins.admin_order');
