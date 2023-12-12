@@ -46,7 +46,7 @@ class AdminController extends Controller
     {
         $orders = Order::with(['dish', 'room', 'table'])->get();
 
-        return view('admins.admin_order', ['adminOrder' => $orders]);
+        return view('admins.admin_order', ['orders' => $orders]);
 
     }
     /**

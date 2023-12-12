@@ -13,6 +13,8 @@ class OrderController extends Controller
     public function index()
     {
         //
+        $orders = Order::with(['dish', 'room', 'table'])->get();
+        return view('admins.admin_order', compact('orders'));
     }
 
     /**
@@ -34,9 +36,11 @@ class OrderController extends Controller
     /**
      * Display the specified resource.
      */
-    public function show(Order $order)
+    public function show($id)
     {
         //
+        $order = Order::with(['dish', 'room', 'table'])->findOrFail($id);
+        return view('admins.admin_order', compact('order'));
     }
 
     /**
