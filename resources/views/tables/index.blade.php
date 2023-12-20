@@ -11,7 +11,7 @@
     <!-- Welcome Message -->
     <div class="absolute inset-0 bg-black/40 flex justify-center items-center">
       <div class="text-white text-center">
-        <h1 class="text-4xl font-semibold mb-4 opacity-90">Join us for a delightful dining experience</h1>
+        <h1 class="text-4xl font-semibold mb-4 opacity-90">Join us for a delightful dining/meeting experience</h1>
         <p class="text-lg opacity-80">Reserve your table now</p>
       </div>
     </div>

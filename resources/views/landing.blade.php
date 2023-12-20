@@ -1,13 +1,13 @@
 @extends('layouts.app')
 
 @section('content')
-    <nav class="bg-blue-500 p-4">
+    <nav class="bg-blue-700 p-4">
         <div class="container mx-auto flex justify-between items-center">
             <div class="text-white font-bold text-xl inline-flex">
                 <img src="" alt="" class="h-10 w-auto">
                 <h1>Hotel Management System</h1>
             </div>
-            <ul class="flex space-x-6 text-white">
+            <ul class="flex space-x-6 text-white" >
                 <li><a href="#" class="hover:text-gray-200">Home</a></li>
                 <li><a href="{{ route('dishes.index')}}" class="hover:text-gray-200">Dishes</a></li>
                 <li><a href="{{ route('tables.index')}}" class="hover:text-gray-200">Tables</a></li>
@@ -19,7 +19,7 @@
     </nav>
 
     <!-- Banner -->
-    <header class="bg-blue-900 text-white py-16 px-4">
+    <header class="bg-blue-600 text-white py-16 px-4">
         <div class="container mx-auto flex items-center">
             <div class="w-1/2">
                 <h1 class="text-4xl font-semibold mb-4">Welcome to Our Hotel</h1>

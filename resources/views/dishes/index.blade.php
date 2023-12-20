@@ -34,8 +34,8 @@
             <div class="p-4">
               <h2 class="text-xl font-semibold">{{ $dish->dish_name}}</h2>
               <p class="text-gray-600">{{ $dish->dish_description }}</p>
-              <p class="mt-2 text-lg font-semibold text-green-600">Ksh {{ $dish->dish_price }}</p>
-              <a href="#" class="block mt-4 px-4 py-2 bg-green-600 text-white text-center rounded-md hover:bg-green-700">Buy</a>
+              <p class="mt-2 text-lg font-semibold text-blue-600">Ksh {{ $dish->dish_price }}</p>
+              <a href="#" class="block mt-4 px-4 py-2 bg-blue-600 text-white text-center rounded-md hover:bg-blue-700">Buy</a>
             </div>
         </div>
     @empty
